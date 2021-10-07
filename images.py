@@ -12,3 +12,5 @@ with open('images.txt','r') as fp:
         image = requests.get(url)
         open('images/img'+str(idx+1)+'.png', 'wb').write(image.content)
         print('Image',idx+1, 'downloaded')
+        
+os.remove('images.py')
